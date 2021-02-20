@@ -14,6 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: xcodebuild -project 'Numero.xcodeproj' -scheme 'Numero' -detination 'generic/platform=iOS' -configutation Release build CODE_SIGNING_ALLOWED=NO
+      run: xcodebuild -project 'Numero.xcodeproj' -scheme 'Numero' -destination 'generic/platform=iOS' -configutation Release build CODE_SIGNING_ALLOWED=NO
     - name: Run tests
-      run: xcodebuild -project 'Numero.xcodeproj' -scheme 'Numero' -detination 'platform=iOS Simulator,name=iPhone 8' test
+      run: xcodebuild -project 'Numero.xcodeproj' -scheme 'Numero' -destination 'platform=iOS Simulator,name=iPhone 8' test
